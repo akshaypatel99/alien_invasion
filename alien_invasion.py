@@ -6,7 +6,7 @@ from ship import Ship
 
 
 class AlienInvasion:
-    """Overall class to manage game assets and behavior"""
+    """Overall class to manage game assets and behaviour"""
 
     def __init__(self):
         """Initialize the game, and create game resources"""
@@ -24,6 +24,7 @@ class AlienInvasion:
         while True:
             # Look for new event, update the screen and tick the clock on each pass through the event loop
             self._check_events()
+            self.ship.update()
             self._update_screen()
             self.clock.tick(60)
 
@@ -32,6 +33,18 @@ class AlienInvasion:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sys.exit()
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_RIGHT:
+                    # Move the ship to the right.
+                    self.ship.moving_right = True
+                elif event.key == pygame.K_LEFT:
+                    # Move the ship to the left.
+                    self.ship.moving_left = True
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_RIGHT:
+                    self.ship.moving_right = False
+                elif event.key == pygame.K_LEFT:
+                    self.ship.moving_left = False
 
     def _update_screen(self):
         """Update images on the screen, and flip to the new screen"""
