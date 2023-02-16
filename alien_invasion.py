@@ -31,7 +31,7 @@ class AlienInvasion:
             # Look for new event, update the screen and tick the clock on each pass through the event loop
             self._check_events()
             self.ship.update()
-            self._update_bullets_()
+            self._update_bullets()
             self._update_screen()
             self.clock.tick(60)
 
