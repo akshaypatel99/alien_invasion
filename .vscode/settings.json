@@ -5,6 +5,7 @@
     "FULLSCREEN",
     "groupcollide",
     "midbottom",
-    "midtop"
+    "midtop",
+    "spritecollideany"
   ]
 }
