@@ -2,10 +2,14 @@
   "cSpell.words": [
     "blit",
     "blitme",
+    "centerx",
+    "collidepoint",
     "FULLSCREEN",
     "groupcollide",
     "midbottom",
     "midtop",
+    "MOUSEBUTTONDOWN",
+    "speedup",
     "spritecollideany"
   ]
 }
